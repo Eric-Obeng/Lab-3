@@ -4,5 +4,149 @@
   margin: unset;
   padding: unset;
   box-sizing: border-box;
-  font-family: "Archivo", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
+
+main {
+  display: flex;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aqua; */
+  width: 100dvw;
+  height: 100dvh;
+}
+
+#gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  padding: 10px;
+}
+
+#gallery-container img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+#lightbox img {
+  max-width: 90%;
+  min-height: 80%;
+  margin: 3% auto;
+}
+
+.thumbnail {
+  transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.caption {
+  position: absolute;
+  max-width: 540px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  bottom: 55px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#lightbox .close {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 15px;
+  height: 30px;
+  width: 30px;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#prev-btn {
+  left: 10px;
+}
+#next-btn {
+  right: 10px;
+}
+/* .thumbnail {
+  flex: 1 0 50%;
+  cursor: pointer;
+} */
+
+/*
+
+.thumbnail img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+#lightbox img {
+  max-width: 90%;
+  min-height: 80%;
+}
+
+#lightbox .close-lightbox {
+  color: red;
+  font-size: 2rem;
+}
+
+#lightbox-caption {
+  color: white;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+*/
