@@ -124,4 +124,13 @@ closeBtn.addEventListener("click", closeLightbox);
 nextBtn.addEventListener("click", showNextImage);
 prevBtn.addEventListener("click", showPrevImage);
 
-
+// Adding event listener for left and right arrow keys navigation
+document.addEventListener("keydown", (e) => {
+  if (lightbox.style.display === "flex") {
+    if (e.key === "ArrowRight") {
+      showNextImage();
+    } else if (e.key === "ArrowLeft") {
+      showPrevImage();
+    }
+  }
+});
