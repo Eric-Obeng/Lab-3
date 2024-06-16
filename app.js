@@ -75,9 +75,15 @@ function closeLightbox() {
 
 function openLightbox(index) {
   lightbox.style.display = "flex";
-  lightboxImg.src = images[index].img;
-  lightboxCaption.textContent = images[index].caption;
-  currentIndex = index;
+  lightboxImg.classList.remove("visible");
+
+  setTimeout(() => {
+    lightboxImg.src = images[index].img;
+    lightboxCaption.textContent = images[index].caption;
+    currentIndex = index;
+
+    lightboxImg.classList.add("visible");
+  }, 300);
 }
 
 function showNextImage() {
