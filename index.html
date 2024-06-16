@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width= , initial-scale=1.0" />
     <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="main-wrapper">
+      <div id="gallery-container" class="image-grid"></div>
+      <div id="lightbox">
+        <span id="close-lightbox" class="close" title="close">❌</span>
+        <img src="" alt="" id="lightbox-img" class="lightbox-img" />
+        <div id="lightbox-caption" class="caption"></div>
+        <button id="prev-btn" class="btn" title="previous">Previous</button>
+        <button id="next-btn" class="btn" title="next">Next</button>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
 </html>
