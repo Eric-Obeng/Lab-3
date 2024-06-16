@@ -51,6 +51,12 @@ main {
   max-width: 90%;
   min-height: 80%;
   margin: 3% auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#lightbox img.visible {
+  opacity: 1;
 }
 
 .thumbnail {
@@ -95,6 +101,14 @@ main {
   border: none;
   padding: 10px;
   cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000000;
+  transition: 0.5s all ease-out;
 }
 
 #prev-btn {
